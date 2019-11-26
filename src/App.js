@@ -3,8 +3,12 @@ import React, { Component } from 'react';
 // Normalizes string as a slug - a string that is safe to use
 // in both URLs and html attributes
 import slugify from 'slugify';
-
 import './App.css';
+import CartItem from './CartItem/CartItem';
+import CartList from './CartList/CartList';
+import SpecBox from './SpecBox/SpecBox';
+import SpecItem from './SpecItem/SpecItem';
+import SpecList from './SpecList/SpecList';
 
 // This object will allow us to
 // easily convert numbers into US dollar values
@@ -63,7 +67,7 @@ class App extends Component {
             </label>
           </div>
         );
-      });
+      });  
 
       return (
         <fieldset className="feature" key={featureHash}>
@@ -94,7 +98,7 @@ class App extends Component {
       (acc, curr) => acc + this.state.selected[curr].cost,
       0
     );
-
+    
     return (
       <div className="App">
         <header>
@@ -119,6 +123,7 @@ class App extends Component {
       </div>
     );
   }
+
 }
 
 export default App;
